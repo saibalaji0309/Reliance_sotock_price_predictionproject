@@ -4,14 +4,14 @@ import numpy as np
 import joblib
 
 # Path to the trained models
-price_model_path = r'pythonProject\predict_close_price_model.pkl'
-volume_model_path = r'pythonProject\predict_volume_model.pkl'
+price_model_path = 'predict_close_price_model.pkl'
+volume_model_path = 'predict_volume_model.pkl'
 
 # Load the trained models
 price_model = joblib.load(price_model_path)
 volume_model = joblib.load(volume_model_path)
 
-st.image(r'F:\pythonProject\reliance_logo.png',width=400)
+st.image('reliance_logo.png',width=400)
 
 # Streamlit application title
 st.title('Close Price and Volume Prediction from 2024 to 2029')
@@ -61,7 +61,7 @@ def predict_volume(date):
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image(r'F:\pythonProject\close_price.png')
+    st.image('close_price.png')
     st.header("Close Price Predictor")
     # Input field for a specific date for stock price prediction
     price_date = st.date_input('Select a date for stock price prediction', pd.to_datetime('2024-01-01'))
@@ -85,7 +85,7 @@ with col1:
 
 
 with col2:
-    st.image(r'F:\pythonProject\volume.png')
+    st.image('volume.png')
     st.header("Volume Predictor")
     # Input field for a specific date for volume prediction
     volume_date = st.date_input('Select a date for volume prediction', pd.to_datetime('2024-01-01'))
