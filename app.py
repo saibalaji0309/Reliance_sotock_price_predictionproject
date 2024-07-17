@@ -40,7 +40,7 @@ def predict_future_volumes(start_date, end_date):
     future_pred = volume_model.predict(future_dates_num)
 
     # Create a DataFrame for the results
-    prediction_df = pd.DataFrame({'Date': future_dates, 'Predicted_Close': future_pred})
+    prediction_df = pd.DataFrame({'Date': future_dates, 'Predicted_Volume': future_pred})
     prediction_df.set_index('Date', inplace=True)
     return prediction_df
 
